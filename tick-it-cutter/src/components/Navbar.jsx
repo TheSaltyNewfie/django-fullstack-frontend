@@ -19,8 +19,8 @@ function MainNavbar() {
             navbarScroll
           >
             <Nav.Link as={Link} to={'/'} href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Venues</Nav.Link>
-            <Nav.Link href="#action3">Events</Nav.Link>
+            <Nav.Link as={Link} to={"/venues"} href="#action2">Venues</Nav.Link>
+            <Nav.Link as={Link} to={"/events"} href="#action3">Events</Nav.Link>
             <Nav.Link as={Link} to={"/myorders"} href="#action4">My Orders</Nav.Link>
             
           </Nav>
