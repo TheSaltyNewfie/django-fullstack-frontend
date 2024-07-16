@@ -14,14 +14,14 @@ function App() {
   return (
 	  <>
 	  	<div className="main">
-      		<Routes>
-	  			<Route path="/" element={<Home />} />
+      	<Routes>
+	  		<Route path="/" element={<Home />} />
 				<Route path="/venues" element={<Venues />} /> {/* Add the MyOrders route */}
 				<Route path="/events" element={<Events />} /> {/* Add the MyOrders route */}
 				<Route path="/myorders" element={<MyOrders />} /> {/* Add the MyOrders route */}
 				<Route path="/login" element={<LoginPage/>} />
-      		</Routes>
-      	</div>
+      	</Routes>
+      </div>
     </>
   )
 }
