@@ -16,5 +16,10 @@
 .featureSlide {
   margin: 10px auto;
   width: 70%;
- 
 }
+
+/*
+.featureSlide {
+  margin: 100px auto;
+  max-width: 100vh;
+*/
