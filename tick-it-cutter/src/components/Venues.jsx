@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
 import '../App.css';
 
+
 export default function Venues() {
     return (
         <>
@@ -78,3 +79,4 @@ export default function Venues() {
         </>
     );
 }
+
