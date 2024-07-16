@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
 
+
+#root {
+  background-color: #000;
+  height: 100vh;
+}
+
+.welcomeTitle {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Passero One", sans-serif;
+  color: #FFF;
+  font-size: 5rem;
+}
+.featureSlide {
+  margin: 10px auto;
+  width: 70%;
+}
+
+/*
 .featureSlide {
   margin: 100px auto;
   max-width: 100vh;
-}
+*/
