@@ -4,13 +4,14 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+
 import { Link, useNavigate } from 'react-router-dom';
 
 function MainNavbar() {
   let navigate = useNavigate()
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary" >
       <Container fluid>
         <Navbar.Brand href="#">Tick-iT Cutter</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -33,7 +34,7 @@ function MainNavbar() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button>Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
