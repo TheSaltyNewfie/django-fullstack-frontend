@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import Navbar from './Navbar'
-import Features from './Features'
+import Navbar from '../components/Navbar'
+import Features from '../components/Features'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 

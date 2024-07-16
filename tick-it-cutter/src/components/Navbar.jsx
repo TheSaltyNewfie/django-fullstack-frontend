@@ -1,9 +1,10 @@
-import Button from 'react-bootstrap/Button'
-import Container from 'react-bootstrap/Container'
-import Form from 'react-bootstrap/Form'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
-import { Link, useNavigate } from "react-router-dom"
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
 function MainNavbar() {
 let navigate = useNavigate()
@@ -19,10 +20,11 @@ let navigate = useNavigate()
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link as={Link} to={'/'} href="#action1">Home</Nav.Link>
             <Nav.Link href="#action2">Venues</Nav.Link>
             <Nav.Link href="#action3">Events</Nav.Link>
-            <Nav.Link href="#action3">My Orders</Nav.Link>
+            <Nav.Link as={Link} to={"/myorders"} href="#action4">My Orders</Nav.Link>
+            
           </Nav>
           <Form className="d-flex">
             <Form.Control
