@@ -10,6 +10,7 @@ export default function Home () {
     <div className='heroPage'>
       <Navbar />
       <h1 className='welcomeTitle'>Tick-iT Cutter</h1>
+    
       <Features />
     </div> 
   )
