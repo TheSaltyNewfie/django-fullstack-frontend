@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
 
-
 #root {
   background-color: #000;
   height: 100vh;
@@ -12,10 +11,43 @@
   color: #FFF;
   font-size: 5rem;
 }
+
 .featureSlide {
   margin: 10px auto;
   width: 70%;
 }
+
+/*
+.featureSlide {
+  margin: 100px auto;
+  max-width: 100vh;
+*/
+
+.bg-body-tertiary {
+  background-color: gray;
+}
+
+.gray-background {
+  background-color: gray;
+}
+
+.filter3 {
+  margin: 1%;
+}
+
+.venue-search {
+  background-color: lightgrey;
+}
+
+.filter {
+  background-color: gray;
+  margin-top: 2%;
+}
+
+.card {
+  margin: 2%;
+}
+
 /* Main Page Cards */
 .mainCard {
   display: flex;
@@ -60,4 +92,3 @@
   box-shadow: 5px 2px 20px #63c3fa;
   transform: translate(3px);
 }
-
