@@ -4,7 +4,6 @@
   background-color: #000;
   height: 100vh;
 }
-
 .welcomeTitle {
   margin-top: 30px;
   text-align: center;
@@ -17,6 +16,12 @@
   margin: 10px auto;
   width: 70%;
 }
+
+/*
+.featureSlide {
+  margin: 100px auto;
+  max-width: 100vh;
+*/
 
 .bg-body-tertiary {
   background-color: gray;
@@ -43,3 +48,47 @@
   margin: 2%;
 }
 
+/* Main Page Cards */
+.mainCard {
+  display: flex;
+  flex-direction: row;
+  margin: 60px auto;
+  width: 1500px;
+}
+
+/* My Orders Style */
+.ordersContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 200px 0 0 0;
+}
+
+.checkoutContainer {
+  /* margin: 200px 0 0 0; */
+  background-color: #00bde73b;
+  width: 800px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px #17a9fd;
+}
+.checkoutTitle h1{
+  color: azure;
+  text-align: center;
+}
+
+/* Credit card component */
+.credit-card {
+  background-color: #00bde73b;
+  padding: 30px;
+  /* margin: 200px 10px 0 60px; */
+  max-width: 420px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px #17a9fd;
+}
+.rccs {
+  margin-bottom: 50px!important;
+}
+.credit-card:hover {
+  box-shadow: 5px 2px 20px #63c3fa;
+  transform: translate(3px);
+}

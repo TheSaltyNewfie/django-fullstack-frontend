@@ -13,7 +13,7 @@ function MainNavbar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary" >
       <Container fluid>
-        <Navbar.Brand href="#">Tick-iT Cutter</Navbar.Brand>
+        <Navbar.Brand href="/">Tick-iT Cutter</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
