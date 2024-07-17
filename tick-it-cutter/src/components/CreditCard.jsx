@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import Cards from "react-credit-cards-2";
-import "react-credit-cards-2/dist/es/styles-compiled.css";
+import React, { useState } from "react"
+import Cards from "react-credit-cards-2"
+import "react-credit-cards-2/dist/es/styles-compiled.css"
 
 const CreditCardForm = () => {
   const [state, setState] = useState({
@@ -9,19 +9,19 @@ const CreditCardForm = () => {
     expiry: "",
     cvc: "",
     focus: "",
-  });
+  })
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setState((prev) => ({ ...prev, [name]: value }));
+    setState((prev) => ({ ...prev, [name]: value }))
   };
 
   const handleInputFocus = (e) => {
-    setState((prev) => ({ ...prev, focus: e.target.name }));
+    setState((prev) => ({ ...prev, focus: e.target.name }))
   };
 
   return (
-    <div>
+    <div className="credit-card">
       <Cards
         number={state.number}
         expiry={state.expiry}
@@ -85,12 +85,12 @@ const CreditCardForm = () => {
           </div>
 
           <div className="d-grid">
-            <button className="btn btn-dark">Confirm</button>
+            <button className="btn btn-success">Confirm</button>
           </div>
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default CreditCardForm;
