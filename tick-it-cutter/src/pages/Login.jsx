@@ -8,11 +8,10 @@ import CardHeader from 'react-bootstrap/CardHeader'
 import CardFooter from 'react-bootstrap/CardFooter'
 import { useNavigate } from 'react-router-dom'
 
-axios.defaults.xsrfHeaderName = "X-CSRFToken"
-axios.defaults.xsrfCookieName = "csrftoken"
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+axios.defaults.xsrfCookieName = 'csrftoken'
 
 export default function LoginPage() {
-
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
@@ -21,14 +20,17 @@ export default function LoginPage() {
         e.preventDefault()
 
         const csrftoken = Cookies.get('csrftoken')
-        const response = await axios.post(`${config.api_endpoint}/api-token-auth/`, {
-            username,
-            password
-        }, {
-            headers: {
-                'X-CSRFToken': csrftoken,
+        const response = await axios.post(`${config.api_endpoint}/api-token-auth/`,
+            {
+                username,
+                password
+            },
+            {
+                headers: {
+                    'X-CSRFToken': csrftoken
+                }
             }
-        })
+        )
 
         const token = response.data.token
         localStorage.setItem('token', token)
@@ -37,22 +39,22 @@ export default function LoginPage() {
     }
 
     return (
-        <Card >
+        <Card>
             <CardHeader>
                 <p>Login</p>
             </CardHeader>
             <CardBody>
                 <form onSubmit={handleLogin}>
-                    <input 
-                        type='username'
-                        placeholder='Username'
+                    <input
+                        type="username"
+                        placeholder="Username"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                     />
 
-                    <input 
-                        type='password'
-                        placeholder='Username'
+                    <input
+                        type="password"
+                        placeholder="Username"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />

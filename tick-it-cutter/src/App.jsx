@@ -7,23 +7,20 @@ import Venues from './components/Venues'
 import Events from './components/Events'
 import LoginPage from './pages/Login'
 
-
 function App() {
-  
-
-  return (
-	  <>
-	  	<div className="main">
-      	<Routes>
-	  		<Route path="/" element={<Home />} />
-				<Route path="/venues" element={<Venues />} /> {/* Add the MyOrders route */}
-				<Route path="/events" element={<Events />} /> {/* Add the MyOrders route */}
-				<Route path="/myorders" element={<MyOrders />} /> {/* Add the MyOrders route */}
-				<Route path="/login" element={<LoginPage/>} />
-      	</Routes>
-      </div>
-    </>
-  )
+    return (
+        <>
+            <div className="main">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/venues" element={<Venues />} />
+                    <Route path="/events" element={<Events />} />
+                    <Route path="/myorders" element={<MyOrders />} />
+                    <Route path="/login" element={<LoginPage />} />
+                </Routes>
+            </div>
+        </>
+    )
 }
 
 export default App
