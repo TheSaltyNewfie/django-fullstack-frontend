@@ -6,6 +6,7 @@ import MyOrders from './components/MyOrders'
 import Venues from './components/Venues'
 import Events from './components/Events'
 import LoginPage from './pages/Login'
+import ArtistPage from './pages/Artists'
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                     <Route path="/events" element={<Events />} />
                     <Route path="/myorders" element={<MyOrders />} />
                     <Route path="/login" element={<LoginPage />} />
+                    <Route path="/artists" element={<ArtistPage />} />
                 </Routes>
             </div>
         </>
