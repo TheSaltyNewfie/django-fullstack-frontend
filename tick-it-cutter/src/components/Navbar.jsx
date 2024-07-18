@@ -4,7 +4,8 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link, useNavigate } from 'react-router-dom';
 
 function MainNavbar() {
@@ -25,7 +26,8 @@ function MainNavbar() {
             <Nav.Link as={Link} to={"/venues"} href="#action2">Venues</Nav.Link>
             <Nav.Link as={Link} to={"/events"} href="#action3">Events</Nav.Link>
             <Nav.Link as={Link} to={"/myorders"} href="#action4">My Orders</Nav.Link>
-            
+            <Nav.Link as={Link} to={"/login"} href="#action4"><FontAwesomeIcon icon={faUser} /></Nav.Link>
+      
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -36,6 +38,7 @@ function MainNavbar() {
             />
             <Button>Search</Button>
           </Form>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 #root {
   background-color: #000;
@@ -52,7 +54,7 @@
 .mainCard {
   display: flex;
   flex-direction: row;
-  margin: 60px auto;
+  margin: 0 auto;
   width: 1500px;
 }
 
@@ -72,8 +74,79 @@
   box-shadow: 2px 2px 20px #17a9fd;
 }
 .checkoutTitle h1{
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
   color: azure;
   text-align: center;
+  margin-top: 20px;
+}
+.checkoutCard {
+  display: flex;
+  flex-direction: row;
+  margin: 15px auto;
+  background-color: aqua;
+  width: 95%;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #ffffff5f;
+}
+.ticket-img {
+  border: 1px solid #00000042;
+  margin: 10px;
+  border-radius: 5px;
+}
+.ticket-detail {
+  margin: 20px 150px 0 20px;
+}
+.quantityContainer input {
+  margin: 50px 0 0 0;
+  width: 2vw;
+  text-align: center;
+  border: none;
+  background-color: #00000000;
+  font-size: 1.2rem;
+}
+.btn-minus {
+  font-size: 1.3rem;
+  color: red;
+  background-color: #00000000;
+  border: none;
+}
+.btn-plus {
+  font-size: 1.3rem;
+  color: green;
+  background-color: #00000000;
+  border: none;
+}
+.deleteIcon button {
+  margin: 40px 0 0 180px;
+  border: none;
+  background-color: #ffffff00;
+  color: rgb(255, 33, 33);
+  font-size: 1.5rem;
+}
+.orderSummery {
+  display: flex;
+  flex-direction: column;
+  background: aqua;
+  margin: 150px 0 30px 340px;
+  padding: 20px;
+  width: 55%;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 3px 3px 5px #ffffff5f;
+}
+.orderSummery p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+}
+.orderSummery button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  background-color: green;
+  color: aliceblue;
+  width: 10vw;
+  margin: 0 auto;
+  border-radius: 5px;
 }
 
 /* Credit card component */
@@ -91,4 +164,38 @@
 .credit-card:hover {
   box-shadow: 5px 2px 20px #63c3fa;
   transform: translate(3px);
+}
+
+/* Login Styles */
+.loginContainer {
+  width: 20%;
+  margin: 300px auto;
+  background-color: #00bde73b;
+  box-shadow: 2px 2px 20px #17a9fd;
+}
+.loginHeader h3 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #FFF;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input.loginUsername, input.loginPassword {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  width: 17vw;
+  margin: 20px 0 10px 0;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+}
+button.loginSubmit {
+  margin: 10px 0 10px 0;
+  width: 10vw;
+  background-color: green;
+  border-radius: 5px;
+  font-size: 1.6rem;
 }

@@ -6,10 +6,13 @@ import Card from 'react-bootstrap/Card'
 import CardBody from 'react-bootstrap/CardBody'
 import CardHeader from 'react-bootstrap/CardHeader'
 import CardFooter from 'react-bootstrap/CardFooter'
+import Navbar from '../components/Navbar'
 import { useNavigate } from 'react-router-dom'
+import '../App.css'
 
-axios.defaults.xsrfHeaderName = 'X-CSRFToken'
-axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = "X-CSRFToken"
+axios.defaults.xsrfCookieName = "csrftoken"
+
 
 export default function LoginPage() {
     const [username, setUsername] = useState('')
@@ -39,28 +42,31 @@ export default function LoginPage() {
     }
 
     return (
-        <Card>
-            <CardHeader>
-                <p>Login</p>
+        <div>
+            <Navbar />
+            <Card className='loginContainer'>
+            <CardHeader className='loginHeader'>
+                <h3>Login</h3>
             </CardHeader>
-            <CardBody>
-                <form onSubmit={handleLogin}>
-                    <input
-                        type="username"
-                        placeholder="Username"
+            <CardBody >
+                <form className='loginForm'onSubmit={handleLogin}>
+                    <input className='loginUsername'
+                        type='username'
+                        placeholder='Username'
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                     />
 
-                    <input
-                        type="password"
-                        placeholder="Username"
+                    <input className='loginPassword'
+                        type='password'
+                        placeholder='Password'
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <button type="submit">Submit</button>
+                    <button className='loginSubmit' type="submit">Submit</button>
                 </form>
             </CardBody>
         </Card>
+        </div>
     )
 }
