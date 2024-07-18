@@ -1,12 +1,14 @@
 import React, { useState } from "react"
 import '../App.css'
 import TicketImg from '../assets/TicketImg.png'
-
 import { faTrashCan, faCirclePlus, faCircleMinus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import CheckoutAlert from "./CheckoutAlert"
 
 const CheckoutForm = () => {
   const [quantity, setQuantity] = useState(1)
+  const [showModal, setShowModal] = useState(false);
+
   
   
   const handleOnChange = (e) => {
@@ -22,6 +24,10 @@ const CheckoutForm = () => {
     if(quantity)
        setQuantity(quantity + 1);
   }
+
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
+
   return (
     <div className="">
       <div className="checkoutTitle">
@@ -49,7 +55,7 @@ const CheckoutForm = () => {
       <div className="orderSummery">
         <p>Total: $130</p>
         <hr />
-        <button>Checkout</button>
+        <CheckoutAlert show={showModal} handleClose={handleClose} />
       </div>
     </div>
   )
