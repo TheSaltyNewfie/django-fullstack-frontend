@@ -9,11 +9,12 @@ import CardFooter from 'react-bootstrap/CardFooter'
 import Navbar from '../components/Navbar'
 import { useNavigate } from 'react-router-dom'
 import '../App.css'
+
 axios.defaults.xsrfHeaderName = "X-CSRFToken"
 axios.defaults.xsrfCookieName = "csrftoken"
 
-export default function LoginPage() {
 
+export default function LoginPage() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
@@ -22,14 +23,17 @@ export default function LoginPage() {
         e.preventDefault()
 
         const csrftoken = Cookies.get('csrftoken')
-        const response = await axios.post(`${config.api_endpoint}/api-token-auth/`, {
-            username,
-            password
-        }, {
-            headers: {
-                'X-CSRFToken': csrftoken,
+        const response = await axios.post(`${config.api_endpoint}/api-token-auth/`,
+            {
+                username,
+                password
+            },
+            {
+                headers: {
+                    'X-CSRFToken': csrftoken
+                }
             }
-        })
+        )
 
         const token = response.data.token
         localStorage.setItem('token', token)
@@ -64,6 +68,5 @@ export default function LoginPage() {
             </CardBody>
         </Card>
         </div>
-        
     )
 }
