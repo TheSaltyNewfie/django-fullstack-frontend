@@ -6,10 +6,31 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
-import '../App.css';
+import axios from "axios";
+import config from "../config/config";
+import { useState, useEffect } from "react";
+import './Event-Venue.css';
+import jay from '../assets/jay-z.jpg'
 
 
 export default function Venues() {
+
+    const [venues, setVenues] = useState([])
+
+useEffect(() => {
+
+const getData = async () => {
+    try {
+        const response = await axios.get(`http://localhost:8000/venues/`)
+        console.log(response.data)
+        setVenues(response.data)
+    } catch (error) {
+        console.log(error)
+    }
+}
+getData()
+}, [])
+
     return (
         <>
             <MainNavbar />
@@ -48,33 +69,19 @@ export default function Venues() {
                 </Stack>
             </div>
             <div className="card-container d-flex flex-wrap justify-content-center">
-                <Card className="m-2" style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="https://via.placeholder.com/150" />
-                    <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-                <Card className="m-2" style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="https://via.placeholder.com/150" />
-                    <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-                <Card className="m-2" style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="https://via.placeholder.com/150" />
-                    <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
+                    {venues.map((venue) => (
+                        <Card key={venue.name} className="m-2" style={{ width: '100%' }}>
+                            <Card.Img variant="top" src={jay} className=".card-image"/>
+                            <Card.Body>
+                            <Card.Title className="card-title">Venue: {venue.name}</Card.Title>
+                            <Card.Text className="card-text">Location: {venue.location}</Card.Text>
+                            <Card.Text className="card-text"> Description: {venue.description}</Card.Text>
+                            <Card.Text className="card-text">Indoors: {venue.isIndoors.toString()}
+                            </Card.Text>
+                            </Card.Body>
+                        </Card>
+
+                    ))}    
             </div>
         </>
     );

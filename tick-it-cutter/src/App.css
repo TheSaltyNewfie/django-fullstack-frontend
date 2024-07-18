@@ -23,31 +23,6 @@
   max-width: 100vh;
 */
 
-.bg-body-tertiary {
-  background-color: gray;
-}
-
-.gray-background {
-  background-color: gray;
-}
-
-.filter3 {
-  margin: 1%;
-}
-
-.venue-search {
-  background-color: lightgrey;
-}
-
-.filter {
-  background-color: gray;
-  margin-top: 2%;
-}
-
-.card {
-  margin: 2%;
-}
-
 /* Main Page Cards */
 .mainCard {
   display: flex;
