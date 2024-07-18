@@ -16,6 +16,7 @@ import jay from '../assets/jay-z.jpg'
 export default function Venues() {
 
     const [venues, setVenues] = useState([])
+    const [expandedView, setExpandedView] = useState(null)
 
 useEffect(() => {
 
@@ -30,6 +31,10 @@ const getData = async () => {
 }
 getData()
 }, [])
+
+const toggleDescription = (venueName) => {
+    setExpandedView((prev) => (prev === venueName ? null : venueName))
+}
 
     return (
         <>
@@ -70,16 +75,18 @@ getData()
             </div>
             <div className="card-container d-flex flex-wrap justify-content-center">
                     {venues.map((venue) => (
-                        <Card key={venue.name} className="m-2" style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={jay} className=".card-image"/>
+                        <div className="venue-card" style={{width: '30%'}}>
+                        <Card key={venue.name} className="m-2 inner-card" style={{ width: '100%' }}>
                             <Card.Body>
-                            <Card.Title className="card-title">Venue: {venue.name}</Card.Title>
-                            <Card.Text className="card-text">Location: {venue.location}</Card.Text>
-                            <Card.Text className="card-text"> Description: {venue.description}</Card.Text>
-                            <Card.Text className="card-text">Indoors: {venue.isIndoors.toString()}
+                            <Card.Title className="venue-title"><u>Venue:</u> {venue.name}</Card.Title>
+                            <Card.Text className="venue-text">{venue.isIndoors ? 'Indoors' : 'Outdoors'}
                             </Card.Text>
+                            <Card.Text className="venue-text">Location: {venue.location}</Card.Text>
+                            <Card.Text className="venue-text"> Description: {venue.description}</Card.Text>
                             </Card.Body>
+                            
                         </Card>
+                        </div>
 
                     ))}    
             </div>
