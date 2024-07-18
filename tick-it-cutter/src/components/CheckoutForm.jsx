@@ -1,32 +1,56 @@
 import React, { useState } from "react"
 import '../App.css'
+import TicketImg from '../assets/TicketImg.png'
+
+import { faTrashCan, faCirclePlus, faCircleMinus } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const CheckoutForm = () => {
+  const [quantity, setQuantity] = useState(1)
   
+  
+  const handleOnChange = (e) => {
+    setQuantity(e.target.value);
+  }
+
+  const handleSubtractQuantity = () => {
+    if(quantity)
+       setQuantity(quantity - 1);
+  }
+
+  const handleAddQuantity = () =>{
+    if(quantity)
+       setQuantity(quantity + 1);
+  }
   return (
     <div className="">
       <div className="checkoutTitle">
-        <h1>Check Out</h1>
+        <h1>Checkout</h1>
       </div>
 
-      <form className="loginContainer">
-        {/* UserName */}
-        <div className="emailContainer">
-        <input type="text" id="username" placeholder="Email"/>
+      <div>
+        <div className="checkoutCard">
+          <img className='ticket-img' src={TicketImg} width={100}/>
+          <div className="ticket-detail"> 
+            <h3>Jay-Z</h3>
+            <p>Venue: Fox Theater</p>
+          </div>
+          <div className="quantityContainer">
+            <button className='btn-minus' onClick={handleSubtractQuantity}><FontAwesomeIcon icon={faCircleMinus} /></button>
+            <input type="text" value={quantity} onChange={handleOnChange} />
+            <button className='btn-plus' onClick={handleAddQuantity}><FontAwesomeIcon icon={faCirclePlus} /></button>
+          </div>
+          <div className="deleteIcon">
+            <button><FontAwesomeIcon icon={faTrashCan} /></button>  
+          </div>
         </div>
+      </div>
 
-        {/* Password */}
-        <div className="passwordContainer">
-          <input type="password" id="password" placeholder=""/>
-        </div>
-
-        {/* Submit Button */}
-        <div className="submitBtnContainer">
-          <button className="submitBtn" type="submit">Log in</button>
-        </div>
-        
-      
-      </form>
+      <div className="orderSummery">
+        <p>Total: $130</p>
+        <hr />
+        <button>Checkout</button>
+      </div>
     </div>
   )
 }
