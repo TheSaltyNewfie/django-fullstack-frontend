@@ -1,64 +1,68 @@
-.card {
-    margin: 2%;
-    background-color: #4e5afd6d;
-    text-align: center;
-    margin: 10px auto;
-    padding: 10px;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    /* box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1); */
-  }
-  
-  .m-2:hover {
+.event-card {
+  display: flex;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  background-color: #4e5afd6d;
+
+}
+
+body { 
+  font-family: "Poppins", sans-serif;
+}
+
+.venue-card {
+  display: flex;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+  text-align: center;
+  background-color: #4e5afd6d;
+}
+
+.venue-title {
+  padding-bottom: 20px;
+}
+
+.venue-text {
+  padding-bottom: 10px;
+}
+
+.full-width-card {
+  width: 100%;
+}
+
+.inner-card {
+  display: flex;
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+}
+
+.event-card:hover {
     box-shadow: 5px 5px 30px hsla(240, 93%, 45%, 0.614);
     transform: translate(3px);
-  }
-  img, .card-image {
-    max-width: 90%;
-    height: auto;
-    border-radius: 2%;
-    margin: 10px auto;
-  }
-  .card .card-title {
-    color: hsl(0, 0%, 86%);
-    margin: 0;
-  }
-  .card .card-text {
-    color: hsl(0, 0%, 83%);
-  }
+}
 
-  .bg-body-tertiary {
-    background-color: gray;
-  }
-  
-  .gray-background {
-    background-color: gray;
-  }
-  
-  .filter3 {
-    margin: 1%;
-  }
-  
-  .venue-search {
-    background-color: lightgrey;
-  }
-  
-  .filter {
-    background-color: gray;
-    margin-top: 2%;
-  }
-  
-  /* .card {
-    margin: 2%;
-    background-color: #4e5afd6d;
-    text-align: center;
-    margin: 10px auto;
-    padding: 10px;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
-  } */
+.event-title {
+  font-size: xx-large;
+}
 
-  body {
-    background-color: black;
-  }
+.event-image {
+  width: 100%;
+}
+
+.featured-title {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Passero One", sans-serif;
+  color: black;
+  font-size: 5rem;
+}
+
+  

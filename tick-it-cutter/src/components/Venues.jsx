@@ -15,6 +15,7 @@ import MadisonSG from '../assets/madison-square-garden.jpg'
 export default function Venues() {
 
     const [venues, setVenues] = useState([])
+    const [expandedView, setExpandedView] = useState(null)
 
 useEffect(() => {
 
@@ -30,6 +31,10 @@ const getData = async () => {
 getData()
 }, [])
 
+const toggleDescription = (venueName) => {
+    setExpandedView((prev) => (prev === venueName ? null : venueName))
+}
+
     return (
         <>
             <MainNavbar />
@@ -41,16 +46,21 @@ getData()
          
             <div className="card-container d-flex flex-wrap justify-content-center">
                     {venues.map((venue) => (
+
                         <Card key={venue.name} className="m-2" style={{ width: '20%' }}>
-                            {/* <Card.Img variant="top" src={MadisonSG} className=".card-image" /> */}
+                            {/* <Card.Img variant="top" src={MadisonSG} className=".card-image" /> 
+                    
+
                             <Card.Body>
-                            <Card.Title className="card-title">Venue: {venue.name}</Card.Title>
-                            <Card.Text className="card-text">Location: {venue.location}</Card.Text>
-                            <Card.Text className="card-text"> Description: {venue.description}</Card.Text>
-                            <Card.Text className="card-text">Indoors: {venue.isIndoors.toString()}
+                            <Card.Title className="venue-title"><u>Venue:</u> {venue.name}</Card.Title>
+                            <Card.Text className="venue-text">{venue.isIndoors ? 'Indoors' : 'Outdoors'}
                             </Card.Text>
+                            <Card.Text className="venue-text">Location: {venue.location}</Card.Text>
+                            <Card.Text className="venue-text"> Description: {venue.description}</Card.Text>
                             </Card.Body>
+                            
                         </Card>
+                        </div>
 
                     ))}    
             </div>
