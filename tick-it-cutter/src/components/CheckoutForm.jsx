@@ -61,11 +61,11 @@ const CheckoutForm = () => {
               <h3>{item.name}</h3>
               <p>Venue: {item.venue}</p>
             </div>
-            <div className="quantityContainer">
+            {/* <div className="quantityContainer">
               <button className='btn-minus' onClick={handleSubtractQuantity}><FontAwesomeIcon icon={faCircleMinus} /></button>
               <input type="text" value={quantity} onChange={handleOnChange} />
               <button className='btn-plus' onClick={handleAddQuantity}><FontAwesomeIcon icon={faCirclePlus} /></button>
-            </div>
+            </div> */}
             <div className="deleteIcon">
               <button onClick={() => removeItem(item.name)}><FontAwesomeIcon icon={faTrashCan} /></button>  
             </div>
