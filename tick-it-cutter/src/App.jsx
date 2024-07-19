@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Home from './components/Home'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
@@ -10,6 +10,17 @@ import ArtistPage from './pages/Artists'
 import VenueDetails from './components/Events-Venues/Venue-Details.jsx'
 
 function App() {
+
+    useEffect(() => {
+        let cart = localStorage.getItem("cart")
+
+        if(cart == undefined) {
+            localStorage.setItem("cart", JSON.stringify([]))
+            console.log("created cart in users localStorage")
+        }
+
+    }, [])
+
     return (
         <>
             <div className="main">
