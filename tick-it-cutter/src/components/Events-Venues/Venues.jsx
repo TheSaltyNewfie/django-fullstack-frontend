@@ -43,7 +43,7 @@ export default function Venues() {
           >
             <Card className="m-2 inner-card" style={{ width: '100%' }}>
               <Card.Body>
-                <Card.Title className="venue-title"><u>Venue:</u> {venue.name}</Card.Title>
+                <Card.Title className="venue-title">{venue.name}</Card.Title>
                 <Card.Text className="venue-text">{venue.isIndoors ? 'Indoors' : 'Outdoors'}</Card.Text>
                 <Card.Text className="venue-text">Location: {venue.location}</Card.Text>
               </Card.Body>
