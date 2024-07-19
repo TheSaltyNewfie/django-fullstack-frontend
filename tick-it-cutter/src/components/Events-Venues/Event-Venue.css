@@ -16,6 +16,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.venue-filter {
+  background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+}
+
 .venue-card {
   display: flex;
   border: 1px solid rgb(0, 0, 0);
@@ -49,7 +53,7 @@ body {
     transform: translate(3px);
 }
 
-.event-title {
+.event-title{
   font-size: xx-large;
 }
 
@@ -57,12 +61,34 @@ body {
   width: 100%;
 }
 
-.featured-title {
+.featured-title, .venue-header  {
   margin-bottom: 30px;
   text-align: center;
   font-family: "Passero One", sans-serif;
   color: black;
+  background-color: white;
   font-size: 5rem;
+}
+
+.venue-header {
+  margin-top: 30px;
+  padding: 30px;
+}
+
+.venue-dcard {
+  display: flex;
+  text-align: center;
+}
+
+
+
+.event-dcard {
+  display: flex;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+  text-align: center;
+  background-color: #4e5afd6d;
 }
 
   

@@ -3,10 +3,11 @@ import Home from './components/Home'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import MyOrders from './components/MyOrders'
-import Venues from './components/Venues'
-import Events from './components/Events'
+import Venues from './components/Events-Venues/Venues.jsx'
+import Events from './components/Events-Venues/Events.jsx'
 import LoginPage from './pages/Login'
 import ArtistPage from './pages/Artists'
+import VenueDetails from './components/Events-Venues/Venue-Details.jsx'
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/venues" element={<Venues />} />
+                    <Route path='/venues/:id' element={<VenueDetails/>}/>
                     <Route path="/events" element={<Events />} />
                     <Route path="/myorders" element={<MyOrders />} />
                     <Route path="/login" element={<LoginPage />} />

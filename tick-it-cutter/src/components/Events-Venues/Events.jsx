@@ -1,8 +1,8 @@
-import MainNavbar from "./Navbar";
+import MainNavbar from "../Navbar";
 import React from "react";
 import { Container, Card, Button, Row, Col } from "react-bootstrap";
 import { useEffect, useState } from "react";
-import config from "../config/config";
+import config from "../../config/config";
 import axios from "axios";
 
 export default function Events() {
@@ -49,7 +49,7 @@ export default function Events() {
           {events.map((event) => (
               <div className="event-card full-width-card">
                 <Card className="m-2 inner-card" style={{ width: '100%' }}>
-                  <Row noGutters="true">
+                  <Row nogutters="true">
                     <Col xs="auto">
                       <Card.Img className="event-image center-image" src="https://via.placeholder.com/150" />
                     </Col>
