@@ -15,6 +15,12 @@
     - Postgresql
     - Docker (For hosting)
 
+# Roles
+
+    Leon - React/CSS
+    Sebastian - React/CSS/Django
+    Tobias - Django/React
+
 # ERD
 - Venues
     - Name: CharField
@@ -33,4 +39,9 @@
     - Artists: Foreign key to Artists
     - Entry_Fee: FloatField
 
+# Wireframes
 
+![alt text](Home.png)
+![alt text](Venues.png)
+![alt text](MyOrder.drawio.png)
+![alt text](Events.png)
