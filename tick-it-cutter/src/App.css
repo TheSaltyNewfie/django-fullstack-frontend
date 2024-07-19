@@ -19,12 +19,6 @@
   width: 70%;
 }
 
-/*
-.featureSlide {
-  margin: 100px auto;
-  max-width: 100vh;
-*/
-
 /* Main Page Cards */
 .mainCard {
   display: flex;
@@ -144,7 +138,7 @@
 /* Login Styles */
 .loginContainer {
   width: 20%;
-  margin: 300px auto;
+  margin: 450px auto;
   background-color: #00bde73b;
   box-shadow: 2px 2px 20px #17a9fd;
 }
@@ -167,10 +161,45 @@ input.loginUsername, input.loginPassword {
   border-radius: 5px;
   outline: none;
 }
-button.loginSubmit {
+/* button.loginSubmit {
   margin: 10px 0 10px 0;
   width: 10vw;
   background-color: green;
   border-radius: 5px;
   font-size: 1.6rem;
+} */
+
+/* Artist Page Styles */
+.artistCardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 80px 0;
+}
+input.artist-search.form-control {
+  border-radius: 5px 0px 0px 5px;
+  width: 30vw;
+}
+button.submit-btn {
+  border: 0 5px 5px 0;
+}
+.search, .submit {
+  padding: 0;
+  margin-top: 30px;
+}
+.artistSearchContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Venues Style */
+.venue-title h1{
+  font-family: "Passero One", sans-serif;
+  font-size: 5rem;
+  color: #FFF;
+  text-align: center;
+  margin: 80px 0;
 }
