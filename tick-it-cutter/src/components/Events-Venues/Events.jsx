@@ -1,8 +1,8 @@
-import MainNavbar from './Navbar'
+import MainNavbar from '../Navbar'
 import React from 'react'
 import { Container, Card, Button, Row, Col } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
-import config from '../config/config'
+import config from '../../config/config'
 import axios from 'axios'
 
 export default function Events() {
