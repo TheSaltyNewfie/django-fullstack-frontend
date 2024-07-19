@@ -67,9 +67,9 @@ const VenueDetails = () => {
                         <Card key={event.id} className="event-dcard">
                             <Card.Body>      
                                 <Card.Title className="event-dtitle">{event.name}</Card.Title>
-                                <Card.Text>Entry Fee: ${event.entry_fee}</Card.Text>
-                                <Card.Text>Artists: {event.artists.name}</Card.Text>
-                                <Button onClick={() => addToCart(event.name, event.entry_fee, event.venue.name)}>
+                                <Card.Text className="event-dentry">Entry Fee: ${event.entry_fee}</Card.Text>
+                                <Card.Text className="event-dartist">Artists: {event.artists.name}</Card.Text>
+                                <Button className="event-dbutton" onClick={() => addToCart(event.name, event.entry_fee, event.venue.name)}>
                                                 Add to cart
                                 </Button>
                                 </Card.Body>

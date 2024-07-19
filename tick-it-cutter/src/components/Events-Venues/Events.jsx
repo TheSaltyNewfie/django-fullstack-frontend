@@ -70,12 +70,6 @@ export default function Events() {
                         <div className="event-card full-width-card" key={index}>
                             <Card className="m-2 inner-card" style={{ width: '100%' }}>
                                 <Row nogutters="true">
-                                    <Col xs="auto">
-                                        <Card.Img
-                                            className="event-image center-image"
-                                            src="https://via.placeholder.com/150"
-                                        />
-                                    </Col>
                                     <Col>
                                         <Card.Body>
                                             <Card.Title className="event-title">
@@ -88,7 +82,7 @@ export default function Events() {
                                                 Artists: {event.artists.name}
                                             </Card.Text>
                                             <Card.Text className="event-text">
-                                                Price of Entry: {event.entry_fee}
+                                                Price of Entry: ${event.entry_fee}
                                             </Card.Text>
                                             <Button onClick={() => addToCart(event.name, event.entry_fee, event.venue.name)}>
                                                 Add to cart
