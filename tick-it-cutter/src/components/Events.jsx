@@ -9,7 +9,14 @@ export default function Events() {
     const [events, setEvents] = useState([])
     const [randomEvent, setRandomEvent] = useState(null)
 
-    const addToCart = () => {}
+    const addToCart = (name, price, venue) => {
+        const cart = localStorage.getItem('cart')
+        let cartArray = JSON.parse(cart)
+
+        cartArray.push({ name: name, price: price, venue: venue })
+
+        localStorage.setItem('cart', JSON.stringify(cartArray))
+    }
 
     useEffect(() => {
         const getData = async () => {
@@ -57,8 +64,8 @@ export default function Events() {
             </Container>
             <Container className="mt-4">
                 <Row>
-                    {events.map((event) => (
-                        <div className="event-card full-width-card">
+                    {events.map((event, index) => (
+                        <div className="event-card full-width-card" key={index}>
                             <Card
                                 className="m-2 inner-card"
                                 style={{ width: '100%' }}
@@ -85,6 +92,7 @@ export default function Events() {
                                                 Price of Entry:{' '}
                                                 {event.entry_fee}
                                             </Card.Text>
+                                            <Button onClick={() => addToCart(event.name, event.entry_fee, event.venue.name)}>Add to cart</Button>
                                         </Card.Body>
                                     </Col>
                                 </Row>

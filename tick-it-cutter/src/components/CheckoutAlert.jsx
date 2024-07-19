@@ -5,9 +5,11 @@ import Modal from 'react-bootstrap/Modal';
 function CheckoutAlert() {
   const [showModal, setShowModal] = useState(false);
 
-  const handleClose = () => setShowModal(false);
+  const handleClose = () => {
+    setShowModal(false)
+    localStorage.removeItem('cart')
+  }
   const handleShow = () => setShowModal(true);
-
   
   return (
     <>
