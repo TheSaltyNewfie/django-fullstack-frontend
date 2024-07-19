@@ -5,6 +5,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import './Event-Venue.css';
+import AddVenueModal from "./AddVenueModal";
 
 export default function Venues() {
   const [venues, setVenues] = useState([]);
@@ -50,6 +51,7 @@ export default function Venues() {
           </div>
         ))}
       </div>
+      <AddVenueModal />
     </>
   );
 }

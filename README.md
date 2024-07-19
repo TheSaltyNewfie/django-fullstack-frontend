@@ -33,3 +33,4 @@
     - Artists: Foreign key to Artists
     - Entry_Fee: FloatField
 
+
