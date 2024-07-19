@@ -11,6 +11,12 @@ const CheckoutForm = () => {
   const [cart, setCart] = useState([])
   const [totalPrice, setTotalPrice] = useState(0.0)
   
+  const removeItem = (name) => {
+    const newCart = cart.filter(item => item.name !== name)
+    setCart(newCart)
+    localStorage.setItem('cart', JSON.stringify(newCart))
+  }
+
   const handleOnChange = (e) => {
     setQuantity(e.target.value);
   }
@@ -61,7 +67,7 @@ const CheckoutForm = () => {
               <button className='btn-plus' onClick={handleAddQuantity}><FontAwesomeIcon icon={faCirclePlus} /></button>
             </div>
             <div className="deleteIcon">
-              <button><FontAwesomeIcon icon={faTrashCan} /></button>  
+              <button onClick={() => removeItem(item.name)}><FontAwesomeIcon icon={faTrashCan} /></button>  
             </div>
           </div>
         ))}
