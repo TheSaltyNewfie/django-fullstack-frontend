@@ -26,6 +26,7 @@ function MainNavbar() {
             <Nav.Link as={Link} to={"/venues"} href="#action2">Venues</Nav.Link>
             <Nav.Link as={Link} to={"/events"} href="#action3">Events</Nav.Link>
             <Nav.Link as={Link} to={"/myorders"} href="#action4">My Orders</Nav.Link>
+            <Nav.Link as={Link} to={"/artists"} href="#action4">Artists</Nav.Link>
             <Nav.Link as={Link} to={"/login"} href="#action4"><FontAwesomeIcon icon={faUser} /></Nav.Link>
       
           </Nav>

@@ -41,22 +41,22 @@ export default function ArtistPage() {
 
             <div>
                 <Form>
-                    <Row>
-                        <Col xs="auto">
+                    <Row className='artistSearchContainer'>
+                        <Col xs="auto" className='search'>
                             <Form.Control
                                 type="text"
                                 placeholder="Search"
                                 className="artist-search"
                             />
                         </Col>
-                        <Col xs="auto">
-                            <Button type="submit">Submit</Button>
+                        <Col xs="auto" className='submit'>
+                            <Button className='submit-btn' type="submit">Submit</Button>
                         </Col>
                     </Row>
                 </Form>
             </div>
 
-            <div>
+            <div className='artistCardContainer'>
                 {artists.map((key, index) => (
                     <Card
                         className="m-2"
